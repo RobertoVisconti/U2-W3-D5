@@ -12,135 +12,105 @@
     />
     <link rel="stylesheet" href="./assets/backoffice.css" />
   </head>
-  <body>
+  <body class="bg-dark min-vh-100 d-flex flex-column">
     <header>
       <nav
         class="navbar navbar-expand-lg bg-dark border-bottom border-body mb-3"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
+          <a class="navbar-brand" href="#"
+            ><img
+              class="img-fluid"
+              style="width: 70px"
+              src="./assets/logo.png"
+              alt="logo"
+          /></a>
         </div>
       </nav>
     </header>
-    <main>
+    <main class="flex-grow-1">
       <!-- Section Create Element Ecommerce -->
       <section class="container">
         <div class="row">
           <div class="col">
             <div id="error-container" class="container mt-3"></div>
+            <h1 class="text-light text-center fw-bold mb-5 changing-back-text">
+              Create a product
+            </h1>
             <form id="ecommerceForm">
               <div class="mb-3">
-                <label for="productName" class="form-label">Product Name</label>
+                <label
+                  for="productName"
+                  class="form-label text-light fw-bold changing-back-text"
+                  >Product Name</label
+                >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control changing-back-text"
                   id="productName"
                   placeholder="Enter product name"
                 />
               </div>
 
               <div class="mb-3">
-                <label for="productDescription" class="form-label"
+                <label
+                  for="productDescription"
+                  class="form-label text-light fw-bold changing-back-text"
                   >Product description</label
                 >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control changing-back-text"
                   id="productDescription"
                   placeholder="Enter product description"
                 />
               </div>
 
               <div class="mb-3">
-                <label for="productBrand" class="form-label"
+                <label
+                  for="productBrand"
+                  class="form-label text-light fw-bold changing-back-text"
                   >Product Brand</label
                 >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control changing-back-text"
                   id="productBrand"
                   placeholder="Enter product brand"
                 />
               </div>
 
               <div class="mb-3">
-                <label for="productImg" class="form-label">Product Image</label>
+                <label
+                  for="productImg"
+                  class="form-label text-light fw-bold changing-back-text"
+                  >Product Image</label
+                >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control changing-back-text"
                   id="productImg"
                   placeholder="Enter product image"
                 />
               </div>
 
               <div class="mb-3">
-                <label for="productPrice" class="form-label"
+                <label
+                  for="productPrice"
+                  class="form-label text-light fw-bold changing-back-text"
                   >Product Price</label
                 >
                 <input
                   type="number"
-                  class="form-control"
+                  class="form-control changing-back-text"
                   id="productPrice"
                   placeholder="Enter product price"
                 />
               </div>
-
-              <button type="submit" class="btn btn-primary">Save</button>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
             </form>
           </div>
         </div>
@@ -149,8 +119,11 @@
       <section class="container my-5">
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <h3 class="text-center mb-4">Product Management</h3>
-            <ul id="load-product-loaded" class="list-group shadow-sm"></ul>
+            <h3 class="text-light text-center mb-4">Product Management</h3>
+            <ul
+              id="load-product-loaded"
+              class="list-group shadow-sm card-changing"
+            ></ul>
           </div>
         </div>
       </section>

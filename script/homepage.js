@@ -32,14 +32,18 @@ const getmyEcommerce = function () {
       data.forEach((product) => {
         const newCard = document.createElement("div");
         newCard.innerHTML = `
-            <div class="card w-25">
-              <img src="${product.imageUrl}" class="card-img-top w-50" alt="${product.name}" />
+         <div class="col">
+            <div class="card card-changing borderImg h-100 ">
+              <img src="${product.imageUrl}" class="card-img-top borderImg" height="300px" alt="${product.name}" />
               <div class="card-body">
                 <h5 class="card-title">${product.name}</h5>
                 <p class="card-text">${product.brand}</p>
                 <p class="card-text"><strong>${product.price}€</strong></p>
+                <div class="d-flex justify-content-center">
                 <a href="./details.html?id=${product._id}" class="btn btn-primary">Product description</a>
+                </div>
               </div>
+            </div>
             </div>
             `;
         container.appendChild(newCard);
